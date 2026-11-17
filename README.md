@@ -2,7 +2,7 @@
 
 A simple web app that converts between world currencies using live exchange rates.
 
-**Live demo:** https://YOUR-GITHUB-USERNAME.github.io/currency-exchange/
+**Live demo:** https://Arfaaah.github.io/currency-exchange-web-app/
 
 ## Features
 
@@ -45,3 +45,4 @@ Open `index.html` in a browser. No install or build step is needed.
 ## Author
 
 Maryam Balarabe Adamu, Software Engineering student, Khalifa Isyaku Rabiu University (KHAIRUN), Kano.
+
