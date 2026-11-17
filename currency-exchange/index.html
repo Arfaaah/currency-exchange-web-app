@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Convert between world currencies using live exchange rates.">
+  <meta name="theme-color" content="#0083b0">
+  <title>Currency Exchange</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Currency Exchange</h1>
+
+    <form id="converter" novalidate>
+      <label class="field" for="amount">
+        <span class="label">Enter amount</span>
+        <input id="amount" type="number" inputmode="decimal" min="0" step="any" value="1" autocomplete="off">
+      </label>
+
+      <div class="pair">
+        <label class="field" for="from">
+          <span class="label">From</span>
+          <span class="select-box">
+            <img id="from-flag" src="https://flagcdn.com/w40/us.png" alt="" width="24" height="18">
+            <select id="from" aria-label="Currency to convert from"></select>
+          </span>
+        </label>
+
+        <button type="button" id="swap" class="swap" aria-label="Swap currencies" title="Swap currencies">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M7 7h11.17l-2.58-2.59L17 3l5 5-5 5-1.41-1.41L18.17 9H7V7Zm10 10H5.83l2.58 2.59L7 21l-5-5 5-5 1.41 1.41L5.83 15H17v2Z"/></svg>
+        </button>
+
+        <label class="field" for="to">
+          <span class="label">To</span>
+          <span class="select-box">
+            <img id="to-flag" src="https://flagcdn.com/w40/ng.png" alt="" width="24" height="18">
+            <select id="to" aria-label="Currency to convert to"></select>
+          </span>
+        </label>
+      </div>
+
+      <output id="result" class="result" aria-live="polite">Getting exchange rate...</output>
+      <p id="updated" class="updated"></p>
+
+      <button type="submit" class="primary">Get Exchange Rate</button>
+    </form>
+
+    <footer>
+      <p>Built by <strong>Maryam Balarabe Adamu</strong></p>
+      <p class="credit">Rates: <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener">Rates By Exchange Rate API</a></p>
+    </footer>
+  </main>
+
+  <script src="js/currencies.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
